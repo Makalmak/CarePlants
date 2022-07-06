@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CarePlants</string>
+    <string name="app_name">Мои растения</string>
+    <string name="plant_info_name"></string>
 </resources>

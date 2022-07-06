@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleTextAppearance="@style/Theme.MyApplication"
+                app:titleTextColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/returnButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/arrow_left_icon"
+                app:layout_constraintEnd_toStartOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/editButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="90dp"
+                android:layout_marginTop="6dp"
+
+                app:layout_constraintStart_toEndOf="@id/toolbar"
+                android:background="@drawable/ic_edit_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_plantIcon"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:src="@color/dark_green"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_plantIcon"
+        android:text="Имя"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_regular_400"/>
+    <TextView
+        android:id="@+id/tv_timeToWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:text="Полейте!"
+        android:textSize="30sp"
+        android:textColor="@color/red_alert"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_regular_400"/>
+    <Button
+        android:id="@+id/btn_setAsWatered"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_timeToWater"
+        app:layout_constraintEnd_toStartOf="@+id/btn_restartTimer"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="9dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="7dp"
+        android:text="Отметить политым"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:letterSpacing="0.01"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_regular_400"
+        android:backgroundTint="@color/gray"/>
+
+    <Button
+        android:id="@+id/btn_restartTimer"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_timeToWater"
+        android:letterSpacing="0.01"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="180dp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="7dp"
+        android:text="Сбросить таймер"
+        android:textSize="22sp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_regular_400"
+        android:backgroundTint="@color/gray"/>
+
+    <TextView
+        android:id="@+id/tv_intervalOfWatering_title"
+        android:layout_width="224dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_setAsWatered"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:gravity="top"
+        android:text="Интервал полива"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_intervalOfWatering"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/montserrat_regular_400"
+        android:letterSpacing="0.01"
+        android:text="Каждые два дня"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_intervalOfWatering_title" />
+
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="224dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_intervalOfWatering"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="132dp"
+
+        android:gravity="top"
+        android:text="О растении"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_textview"
+        android:fontFamily="@font/montserrat_regular_400"
+        android:letterSpacing="0.01"
+        android:text="Я люблю когда волосатые мужики..."
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
