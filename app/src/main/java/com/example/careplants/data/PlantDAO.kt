@@ -2,6 +2,7 @@ package com.example.careplants.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.careplants.model.Plant
 
 @Dao
 interface PlantDAO {

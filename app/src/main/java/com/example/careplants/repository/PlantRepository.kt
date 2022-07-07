@@ -1,8 +1,8 @@
-package com.example.careplants.data
+package com.example.careplants.repository
 
 import androidx.lifecycle.LiveData
-import com.example.careplants.data.Plant
 import com.example.careplants.data.PlantDAO
+import com.example.careplants.model.Plant
 
 class PlantRepository( private val plantDAO: PlantDAO) {
 

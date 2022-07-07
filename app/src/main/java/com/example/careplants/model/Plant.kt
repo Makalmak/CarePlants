@@ -1,4 +1,4 @@
-package com.example.careplants.data
+package com.example.careplants.model
 
 import android.graphics.Bitmap
 import androidx.room.Entity

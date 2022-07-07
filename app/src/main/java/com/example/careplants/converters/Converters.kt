@@ -1,4 +1,4 @@
-package com.example.careplants.data
+package com.example.careplants.converters
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory

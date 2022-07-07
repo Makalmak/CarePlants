@@ -2,6 +2,8 @@ package com.example.careplants.data
 
 import android.content.Context
 import androidx.room.*
+import com.example.careplants.converters.Converters
+import com.example.careplants.model.Plant
 
 
 @Database(entities = [Plant::class], version = 1, exportSchema = false)
