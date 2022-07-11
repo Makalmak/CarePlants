@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class PlantViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Plant>>
+    val readAllData: LiveData<List<Plant>>
     private val repository: PlantRepository
 
     init {
@@ -31,6 +31,12 @@ class PlantViewModel(application: Application): AndroidViewModel(application) {
     fun updatePlant(plant: Plant){
         viewModelScope.launch(Dispatchers.IO){
             repository.updatePlant(plant)
+        }
+    }
+
+    fun deletePlant(plant: Plant){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deletePlant(plant)
         }
     }
 }
