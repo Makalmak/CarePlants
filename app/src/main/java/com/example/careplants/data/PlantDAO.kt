@@ -13,6 +13,9 @@ interface PlantDAO {
     @Update
     suspend fun updatePlant(plant: Plant)
 
+    @Delete
+    suspend fun deletePlant(plant: Plant)
+
     @Query("SELECT * FROM plant_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Plant>>
 }
