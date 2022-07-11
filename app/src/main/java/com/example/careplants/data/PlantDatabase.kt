@@ -7,7 +7,7 @@ import com.example.careplants.model.Plant
 
 
 @Database(entities = [Plant::class], version = 1, exportSchema = false)
-@TypeConverters(Converters::class)
+//@TypeConverters(Converters::class)
 abstract class PlantDatabase: RoomDatabase() {
 
     abstract fun plantDao(): PlantDAO

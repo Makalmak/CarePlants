@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/myPlantsFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_my_plants"
+        android:id="@+id/myPlantsFragment"
+        android:name="com.example.careplants.fragments.list.MyPlantsFragment"
+       >
+        <action
+            android:id="@+id/action_myPlantsFragment_to_addInfoFragment"
+            app:destination="@id/addInfoFragment" />
+        <action
+            android:id="@+id/action_myPlantsFragment_to_plantInfoFragment"
+            app:destination="@id/plantInfoFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_add_info"
+        android:id="@+id/addInfoFragment"
+        android:name="com.example.careplants.fragments.add.AddInfoFragment">
+        <action
+            android:id="@+id/action_addInfoFragment_to_myPlantsFragment"
+            app:destination="@id/myPlantsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantInfoFragment"
+        tools:layout="@layout/fragment_plant_info"
+        android:name="com.example.careplants.fragments.info.PlantInfoFragment"
+        android:label="PlantInfoFragment" >
+        <action
+            android:id="@+id/action_plantInfoFragment_to_myPlantsFragment"
+            app:destination="@id/myPlantsFragment" />
+        <action
+            android:id="@+id/action_plantInfoFragment_to_editInfoFragment"
+            app:destination="@id/editInfoFragment" />
+        <argument
+            android:name="currentPlant"
+            app:argType="com.example.careplants.model.Plant" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_edit_info"
+        android:id="@+id/editInfoFragment"
+        android:name="com.example.careplants.fragments.update.EditInfoFragment"
+        android:label="EditInfoFragment" >
+        <action
+            android:id="@+id/action_editInfoFragment_to_plantInfoFragment"
+            app:destination="@id/plantInfoFragment" />
+        <argument
+            android:name="currentPlant"
+            app:argType="com.example.careplants.model.Plant" />
+        <action
+            android:id="@+id/action_editInfoFragment_to_myPlantsFragment"
+            app:destination="@id/myPlantsFragment" />
+    </fragment>
+</navigation>

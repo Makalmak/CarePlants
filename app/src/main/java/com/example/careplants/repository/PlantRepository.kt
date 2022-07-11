@@ -15,4 +15,8 @@ class PlantRepository( private val plantDAO: PlantDAO) {
     suspend fun updatePlant(plant: Plant){
         plantDAO.updatePlant(plant)
     }
+
+    suspend fun deletePlant(plant: Plant){
+        plantDAO.deletePlant(plant)
+    }
 }
