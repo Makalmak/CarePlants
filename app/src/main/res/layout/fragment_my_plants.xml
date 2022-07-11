@@ -32,9 +32,9 @@
         android:id="@+id/rv_plants"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="@dimen/spacing_mid_small_smaller"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_mid_small_smaller"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
@@ -49,8 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="@dimen/spacing_very_large"
+        android:layout_marginBottom="@dimen/spacing_very_large"
         android:clickable="true"
         android:focusable="true"
         android:foregroundTintMode="src_over"
@@ -58,7 +58,7 @@
         app:backgroundTint="@color/light_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="46dp"
+        app:maxImageSize="@dimen/icon_edit_size"
         app:tint="@color/dark_green" />
 
 

@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="12dp"
-    android:layout_marginEnd="8dp"
+    android:layout_height="@dimen/height_bigger"
+    android:layout_marginStart="@dimen/spacing_smallest"
+    android:layout_marginTop="@dimen/spacing_smaller"
+    android:layout_marginEnd="@dimen/spacing_smallest"
     android:backgroundTint="@color/gray"
     android:id="@+id/plant_item"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="@dimen/corner_radius_normal"
 
-    app:cardElevation="8dp">
+    app:cardElevation="@dimen/spacing_smallest">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,10 +20,10 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_cover"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="290dp"
+            android:layout_height="@dimen/height_normal"
+            android:layout_marginTop="@dimen/spacing_mid_tiny_tiniest"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginEnd="@dimen/spacing_item_icon"
             android:src="@color/light_green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +33,10 @@
         <!--            android:id="@+id/tv_time_to_next_watering"-->
         <!--            android:layout_width="0dp"-->
         <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:layout_marginBottom="@dimen/spacing_tiny"-->
         <!--            android:fontFamily="@font/montserrat_regular_400"-->
         <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="16sp"-->
+        <!--            android:textSize="@dimen/text_size_smaller"-->
         <!--            app:layout_constraintBottom_toBottomOf="parent"-->
         <!--            app:layout_constraintEnd_toEndOf="parent"-->
         <!--            app:layout_constraintStart_toEndOf="@id/iv_cover"-->
@@ -47,12 +47,12 @@
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/spacing_small"
 
             android:fontFamily="@font/montserrat_semibold_600"
             android:textFontWeight="600"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -64,7 +64,7 @@
         <Button
             android:id="@+id/btn_plant"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/height_bigger"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
