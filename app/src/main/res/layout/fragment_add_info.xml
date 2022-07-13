@@ -66,6 +66,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/plantImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_icon_login"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:src="@drawable/images"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="508dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foregroundTintMode="src_over"
+        android:src="@drawable/ic_plusik"
+        app:backgroundTint="@color/light_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/icon_edit_size"
+        app:tint="@color/dark_green" />
+
     <EditText
         android:id="@+id/add_name"
         android:layout_width="wrap_content"
